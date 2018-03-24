@@ -52,7 +52,7 @@ int main()
 		andOutput=gates.andGate(notA,notB); // use and gate
 		norOutput=gates.norGate(a,b); //use nor gate      
 		result=gates.xorGate(andOutput,norOutput); //use xor gate
-		//circuit defination ends
+		//circuit definition ends
     		
 		cout << "\n The output the circuit : ";
     		cout << result;
