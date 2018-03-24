@@ -26,6 +26,11 @@ class Gates{
 		 	return 0;
 		return 1;
 	}
+       int orGate(int firstInput, int secondInput){
+		if(firstInput==1 || secondInput==1)
+			return 1;
+		return 0; 	
+	}
 };
 int main() 
 { 
@@ -40,12 +45,16 @@ int main()
         cin >> b;
         
 	if(a>=0 && a<=1 && b>=0 && b<=1){
-    		notA=gates.notGate(a);
+
+		//Here you define your circuit
+    		notA=gates.notGate(a);    //use not gate  
 		notB=gates.notGate(b);
-		andOutput=gates.andGate(notA,notB);
-		norOutput=gates.norGate(a,b);
-		result=gates.xorGate(andOutput,norOutput);
-    		cout << "\n The output the circuit : ";
+		andOutput=gates.andGate(notA,notB); // use and gate
+		norOutput=gates.norGate(a,b); //use nor gate      
+		result=gates.xorGate(andOutput,norOutput); //use xor gate
+		//circuit defination ends
+    		
+		cout << "\n The output the circuit : ";
     		cout << result;
 		cout <<"\n";
 	}else{
